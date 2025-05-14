@@ -2,7 +2,7 @@
 
 Sundial: A Familiy of Highly Capable  Time Series Foundation Models [[Paper]](https://arxiv.org/abs/2502.00816).
 
-:triangular_flag_on_post: **News** (2025.05) Released a **trillion-scale** pre-trained model on [HuggingFace](https://huggingface.co/thuml/sundial-base-128m). A quickstart usage is provided [here](./quickstart_zero_shot.ipynb).
+:triangular_flag_on_post: **News** (2025.05) Released a **trillion-scale** pre-trained model on [HuggingFace](https://huggingface.co/thuml/sundial-base-128m). A quickstart is provided [here](./quickstart_zero_shot.ipynb).
 
 :triangular_flag_on_post: **News** (2025.05) **Ranked 1st MASE** on the [GIFT-Eval](https://huggingface.co/spaces/Salesforce/GIFT-Eval) Benchmark.
 
@@ -13,7 +13,7 @@ Sundial: A Familiy of Highly Capable  Time Series Foundation Models [[Paper]](ht
 Sundial is a familiy of **generative** time series foundation models. The model can make zero-shot predictions for both **point** and **probabilistic** forecasting.
 
 
-💡 We propose TimeFlow Loss to predict next-patch’s distribution, allowing Transformers to be trained **without discrete tokenization** and make **multiple probable predictions**.
+💡 We propose **TimeFlow Loss** to predict next-patch’s distribution, allowing Transformers to be trained **without discrete tokenization** and make **multiple probable predictions**.
 
 💪 We release Sundial, a family of **scalable** and **efficient** time series foundation models pre-trained on **1 trillion** time points, utilizing our enhanced Transformer.
 
@@ -58,27 +58,7 @@ More examples for predicting quantiles or confidence intervals is provided [here
 <img src="./figures/arch.png" alt="" align=center />
 </p>
 
-Input time series is divided into patch tokens, which are embedded from original continuous values. The patch embeddings are fed into a decoder-only Transformer, a speedup version that learns token representations via causal self-attention. The model is optimized using **TimeFlow** Loss.
-
-
-## TimeFlow Loss
-
-We propose TimeFlow Loss, a parameterized loss function that models per-token probability distribution conditioned on token representations, and generates multiple plausible predictions under the **flow-matching** framework.
-
-This optimization objective operates on original values and facilitates patch-level generation for quick inference, which is highly compatible with continuous-valued modalities, such as time series.
-
-
-> Training
-
-$$
-\mathcal{L}_{\text {TimeFlow }}=\sum_i^N \| \text { FM-Net }\left(\mathbf{y}_i^{(t)}, t, \mathbf{h}_i\right)-\left(\mathbf{y}_i-\mathbf{y}_i^{(0)}\right) \|^2
-$$
-
-> Sampling
-
-<p align="center">
-<img src="./figures/tf_infer.png" alt="" align=center />
-</p>
+Input time series is divided into patch tokens, which are embedded from original continuous values. The patch embeddings are fed into a decoder-only Transformer, a speedup version that learns token representations via causal self-attention. The model is optimized using **TimeFlow** Loss, a parameterized loss function that models per-token probability distribution conditioned on learned representations, and generates multiple probable predictions under the flow-matching framework.
 
 
 ## Evaluation
@@ -86,23 +66,19 @@ $$
 We evaluate Sundial with advanced time series foundation models in these aspects:
 
 ### Peformance
-
 - [Time-Series-Library](./figures/tslib_res.png)
 - [FEV Leaderboard](./figures/fev_res.png)
 - [GIFT-Eval](./figures/gift_res.png)
 
 ### Inference Speed
-
 - [FEV Leaderboard](./figures/fev_eff.png)
 
 
-### Scalability
-
+## Scalability
 - [Pre-training](./figures/train_scale.png)
 - [Test-Time](./figures/test_scale.png)
   
 ## Showcases
-
 - [Time-Series-Library](./figures/tslib_case.png)
 - [FEV Leaderboard]((./figures/fev_case.png))
 - [GIFT-Eval (Code)](./notebook)

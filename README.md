@@ -15,13 +15,42 @@ Sundial is a familiy of **generative** time series foundation models. The model 
 
 💡 We propose TimeFlow Loss to predict next-patch’s distribution, allowing Transformers to be trained **without discrete tokenization** and make **multiple probable predictions**.
 
-💪 We present Sundial, a family of **scalable** and **efficient** time series foundation models pre-trained on **1 trillion** time points, utilizing our enhanced Transformer.
+💪 We release Sundial, a family of **scalable** and **efficient** time series foundation models pre-trained on **1 trillion** time points, utilizing our enhanced Transformer.
 
-🏆 Sundial achieves **state-of-the-art** zero-shot performance on point forecasting and probabilistic forecasting, including best-recognized benchmarks [GIFT-Eval](https://huggingface.co/spaces/Salesforce/GIFT-Eval), [FEV](https://huggingface.co/spaces/autogluon/fev-leaderboard), and [TSLib](https://github.com/thuml/Time-Series-Library), positioning generative time series foundation models as a capable tool for decision-making.
+🏆 Sundial achieves **state-of-the-art** zero-shot performance on [GIFT-Eval](https://huggingface.co/spaces/Salesforce/GIFT-Eval), [FEV](https://huggingface.co/spaces/autogluon/fev-leaderboard), and [TSLib](https://github.com/thuml/Time-Series-Library).
 
 <p align="center">
 <img src="./figures/motivation.png" alt="" align=center />
 </p>
+
+## Quickstart
+
+We release checkpoint and deft model wrapper to make zero-shot predictions on your customized data:
+
+```
+pip install transformers==4.40.1
+```
+
+```
+import torch
+from transformers import AutoModelForCausalLM
+
+# load pretrain model
+model = AutoModelForCausalLM.from_pretrained('thuml/sundial-base-128m', trust_remote_code=True)
+
+# prepare input
+batch_size, lookback_length = 1, 2880
+seqs = torch.randn(batch_size, lookback_length)
+
+# generate forecast
+prediction_length = 96
+num_samples = 20
+output = model.generate(seqs, max_new_tokens=prediction_length, num_samples=num_samples)
+
+print(output.shape) # generate 20 probable predictions
+```
+
+More examples for predicting quantiles or confidence intervals is provided [here](https://github.com/thuml/Sundial/blob/main/examples/quickstart_zero_shot.ipynb).
 
 ## Architecture
 
@@ -29,16 +58,14 @@ Sundial is a familiy of **generative** time series foundation models. The model 
 <img src="./figures/arch.png" alt="" align=center />
 </p>
 
-The input time series is divided into patch tokens, which are embedded from original continuous values. The patch embeddings are fed into a decoder-only Transformer, a stable and speedup version that learns token representations via causal self-attention. The model is optimized using our **TimeFlow** Loss.
-
-> For our previous work, please refer to [**Tim**e-Series-Transform**er** (Timer)](https://github.com/thuml/Large-Time-Series-Model)
+Input time series is divided into patch tokens, which are embedded from original continuous values. The patch embeddings are fed into a decoder-only Transformer, a speedup version that learns token representations via causal self-attention. The model is optimized using **TimeFlow** Loss.
 
 
 ## TimeFlow Loss
 
-We propose TimeFlow Loss, a parameterized loss function that models per-token probability distribution conditioned on input representations, and generates multiple plausible predictions under the flow-matching framework.
+We propose TimeFlow Loss, a parameterized loss function that models per-token probability distribution conditioned on token representations, and generates multiple plausible predictions under the **flow-matching** framework.
 
-This optimization objective operates on original values and facilitates patch-level generation for quick inference, which is highly compatible with continuous-valued modalities, such as time series
+This optimization objective operates on original values and facilitates patch-level generation for quick inference, which is highly compatible with continuous-valued modalities, such as time series.
 
 
 > Training
@@ -53,22 +80,37 @@ $$
 <img src="./figures/tf_infer.png" alt="" align=center />
 </p>
 
-## TimeBench
-
-We collected and curated TimeBench, which comprises over 1 trillion high-quality time points from various sources. Most datasets are collected from real-world records, a small portion (0.05%) is generated synthetically to enhance pattern diversity.
-
-<p align="center">
-<img src="./figures/data.png" alt="" align=center />
-</p>
 
 ## Evaluation
 
-We compare Sundial with advanced time series foundation models on various benchmarks, including (1) Point forecasting: we adopt the long-term forecasting benchmark [TSLib](https://github.com/thuml/Time-Series-Library) using MSE and MAE; (2) Probabilistic forecasting: we experiment on [GIFT-Eval](https://huggingface.co/spaces/Salesforce/GIFT-Eval) and [FEV leaderboard](https://huggingface.co/spaces/autogluon/fev-leaderboard), assessing point (MASE) and probabilistic (CRPS and WQL) metrics.
+We evaluate Sundial with advanced time series foundation models in these aspects:
 
+### Peformance
+
+- [Time-Series-Library](./figures/tslib_res.png)
+- [FEV Leaderboard](./figures/fev_res.png)
+- [GIFT-Eval](./figures/gift_res.png)
+
+### Inference Speed
+
+- [FEV Leaderboard](./figures/fev_eff.png)
+
+
+### Scalability
+
+- [Pre-training](./figures/train_scale.png)
+- [Test-Time](./figures/test_scale.png)
+  
+## Showcases
+
+- [Time-Series-Library](./figures/tslib_case.png)
+- [FEV Leaderboard]((./figures/fev_case.png))
+- [GIFT-Eval (Code)](./notebook)
 
 ## Citation
 
 If you find this repo helpful, please cite our paper. 
+
 
 ```
 @article{liu2025sundial,
@@ -78,6 +120,9 @@ If you find this repo helpful, please cite our paper.
   year={2025}
 }
 ```
+
+For our previous work, please refer to [Timer](https://github.com/thuml/Large-Time-Series-Model) and [Timer-XL](https://github.com/thuml/Timer-XL).
+
 
 ## Acknowledgment
 

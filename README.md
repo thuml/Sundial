@@ -4,7 +4,7 @@ Sundial: A Familiy of Highly Capable  Time Series Foundation Models [[Paper]](ht
 
 :triangular_flag_on_post: **News** (2025.05) Released a **trillion-scale** pre-trained model on [HuggingFace](https://huggingface.co/thuml/sundial-base-128m). A quickstart is provided [here](./quickstart_zero_shot.ipynb).
 
-:triangular_flag_on_post: **News** (2025.05) **Ranked 1st MASE** on the [GIFT-Eval](https://huggingface.co/spaces/Salesforce/GIFT-Eval) Benchmark.
+:triangular_flag_on_post: **News** (2025.05) Get **1st MASE** on the [GIFT-Eval](https://huggingface.co/spaces/Salesforce/GIFT-Eval) Benchmark.
 
 :triangular_flag_on_post: **News** (2025.05) Sundial has been accepted as **ICML 2025 Spotlight**. See you at Vancouver :)
 
@@ -25,7 +25,7 @@ Sundial is a familiy of **generative** time series foundation models. The model 
 
 ## Quickstart
 
-We release checkpoint and deft model wrapper to make zero-shot predictions on your customized data:
+We release checkpoint and model wrapper to make zero-shot predictions on your customized data:
 
 ```
 pip install transformers==4.40.1
@@ -36,18 +36,21 @@ import torch
 from transformers import AutoModelForCausalLM
 
 # load pretrain model
-model = AutoModelForCausalLM.from_pretrained('thuml/sundial-base-128m', trust_remote_code=True)
+# supports different lookback/prediction lengths
+model = AutoModelForCausalLM.from_pretrained('thuml/sundial-base-128m', trust_remote_code=True) 
 
 # prepare input
-batch_size, lookback_length = 1, 2880
+batch_size, lookback_length = 1, 2880 
 seqs = torch.randn(batch_size, lookback_length)
 
-# generate forecast
-prediction_length = 96
+# generate multiple probable predictions
+prediction_length = 96 
 num_samples = 20
+
 output = model.generate(seqs, max_new_tokens=prediction_length, num_samples=num_samples)
 
-print(output.shape) # generate 20 probable predictions
+# use raw predictions for mean/quantiles/confidence-interval estimation
+print(output.shape) 
 ```
 
 More examples for predicting quantiles or confidence intervals is provided [here](https://github.com/thuml/Sundial/blob/main/examples/quickstart_zero_shot.ipynb).
@@ -58,7 +61,7 @@ More examples for predicting quantiles or confidence intervals is provided [here
 <img src="./figures/arch.png" alt="" align=center />
 </p>
 
-Input time series is divided into patch tokens, which are embedded from original continuous values. The patch embeddings are fed into a decoder-only Transformer, a speedup version that learns token representations via causal self-attention. The model is optimized using **TimeFlow** Loss, a parameterized loss function that models per-token probability distribution conditioned on learned representations, and generates multiple probable predictions under the flow-matching framework.
+Input time series is divided into **patch tokens**, which are embedded from original continuous values. The patch embeddings are fed into a decoder-only Transformer, a **speedup** version that learns token representations via causal self-attention. The model is optimized using **TimeFlow Loss**, a parameterized loss function that models per-token probability distribution conditioned on learned representations, and generates multiple probable predictions under the **flow-matching** framework.
 
 
 ## Evaluation

@@ -1,6 +1,12 @@
 # Sundial
 
-Sundial: A Familiy of Highly Capable  Time Series Foundation Models [[Paper]](https://arxiv.org/abs/2502.00816).
+<p align="center">
+<img src="./figures/cover.png" alt="" align=center />
+</p>
+
+This is the official implementation for the paper: [Sundial: A Familiy of Highly Capable  Time Series Foundation Models](https://arxiv.org/abs/2502.00]816).
+
+## Updates
 
 :triangular_flag_on_post: **News** (2025.05) Released a **trillion-scale** pre-trained model on [HuggingFace](https://huggingface.co/thuml/sundial-base-128m). A quickstart is provided [here](./example/quickstart_zero_shot.ipynb).
 
@@ -66,6 +72,10 @@ We evaluate Sundial with advanced time series foundation models on well-recogniz
 - [FEV Leaderboard](./figures/fev_res.png)
 - [GIFT-Eval(**1st MASE**)](./figures/gift_res.png)
 - [Time-Series-Library (**1st MSE/MAE**)](./figures/tslib_res.png)
+
+## Future Work
+
+✨ Exciting news! Code for fine-tuning is on its way and will be available soon! Stay tuned for updates! 🚀
 
 ## Citation
 

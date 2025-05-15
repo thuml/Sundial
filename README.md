@@ -10,14 +10,10 @@ Sundial: A Familiy of Highly Capable  Time Series Foundation Models [[Paper]](ht
 
 ## Introduction
 
-Sundial is a familiy of **generative** time series foundation models. The model can make zero-shot predictions for both **point** and **probabilistic** forecasting.
+Sundial is a familiy of **generative** time series foundation models. The model can be applied for both **point** and **probabilistic** forecasting.
 
 
-💡 We propose **TimeFlow Loss** to predict next-patch’s distribution, allowing Transformers to be trained **without discrete tokenization** and make **multiple probable predictions**.
-
-💪 We release Sundial, a family of **scalable** and **efficient** time series foundation models pre-trained on **1 trillion** time points, utilizing our enhanced Transformer.
-
-🏆 Sundial achieves **state-of-the-art** zero-shot performance on [GIFT-Eval](https://huggingface.co/spaces/Salesforce/GIFT-Eval), [FEV](https://huggingface.co/spaces/autogluon/fev-leaderboard), and [TSLib](https://github.com/thuml/Time-Series-Library).
+We propose **TimeFlow Loss** to predict next-patch’s distribution, allowing Transformers to be trained **without discrete tokenization** and make **non-deterministic predictions**.
 
 <p align="center">
 <img src="./figures/motivation.png" alt="" align=center />
@@ -25,7 +21,7 @@ Sundial is a familiy of **generative** time series foundation models. The model 
 
 ## Quickstart
 
-We release checkpoint and model wrapper to make zero-shot predictions on your customized data:
+We release the checkpoint and model wrapper to make zero-shot predictions on your customized data:
 
 ```
 pip install transformers==4.40.1
@@ -61,30 +57,15 @@ More examples for predicting quantiles or confidence intervals is provided [here
 <img src="./figures/arch.png" alt="" align=center />
 </p>
 
-Input time series is divided into **patch tokens**, which are embedded from original continuous values. The patch embeddings are fed into a decoder-only Transformer, a **speedup** version that learns token representations via causal self-attention. The model is optimized using **TimeFlow Loss**, a parameterized loss function that models per-token probability distribution conditioned on learned representations, and generates multiple probable predictions under the **flow-matching** framework.
-
+> Intuitively, Sundial can be viewed as an ARMA model (Auto-Regression and Moving-Average). Transformer learns auto-regressive token representations. Conditioned on them, TimeFlow transforms random noises into non-deterministic predictions.
 
 ## Evaluation
 
-We evaluate Sundial with advanced time series foundation models in these aspects:
+We evaluate Sundial with advanced time series foundation models on well-recognized benchmarks:
 
-### Peformance
-- [Time-Series-Library](./figures/tslib_res.png)
 - [FEV Leaderboard](./figures/fev_res.png)
-- [GIFT-Eval](./figures/gift_res.png)
-
-### Inference Speed
-- [FEV Leaderboard](./figures/fev_eff.png)
-
-
-## Scalability
-- [Pre-training](./figures/train_scale.png)
-- [Test-Time](./figures/test_scale.png)
-  
-## Showcases
-- [Time-Series-Library](./figures/tslib_case.png)
-- [FEV Leaderboard]((./figures/fev_case.png))
-- [GIFT-Eval (Code)](./notebook)
+- [GIFT-Eval(**1st MASE**)](./figures/gift_res.png)
+- [Time-Series-Library (**1st MSE/MAE**)](./figures/tslib_res.png)
 
 ## Citation
 
@@ -99,9 +80,6 @@ If you find this repo helpful, please cite our paper.
   year={2025}
 }
 ```
-
-For our previous work, please refer to [Timer](https://github.com/thuml/Large-Time-Series-Model) and [Timer-XL](https://github.com/thuml/Timer-XL).
-
 
 ## Acknowledgment
 

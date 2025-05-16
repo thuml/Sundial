@@ -30,7 +30,7 @@ We propose **TimeFlow Loss** to predict next-patch’s distribution, allowing Tr
 
 ## Quickstart
 
-We release a [HuggingFace model](https://huggingface.co/thuml/sundial-base-128m), which makes zero-shot predictions on CPU within seconds 🚀
+We release a [HuggingFace model](https://huggingface.co/thuml/sundial-base-128m), which can make zero-shot predictions on CPU within seconds 🚀
 
 > Inference Time on Apple M1 Pro (16G)
 
@@ -42,7 +42,7 @@ We release a [HuggingFace model](https://huggingface.co/thuml/sundial-base-128m)
 | 2880            | 288               | 20                  | 949ms          |
 
 
-All you need is a network connection and the HuggingFace access.
+All you need is a network connection and the HuggingFace access!
 
 ```
 pip install transformers==4.40.1
@@ -80,7 +80,7 @@ More examples for predicting quantiles or confidence intervals is provided in th
 <img src="./figures/arch.png" alt="" align=center />
 </p>
 
-> Intuitively, Sundial can be viewed as an ARMA model (Auto-Regression and Moving-Average). Transformer learns auto-regressive token representations. Conditioned on them, TimeFlow transforms random noises into non-deterministic predictions.
+> Intuitively, Sundial can be viewed as an **ARMA** model (Auto-Regression and Moving-Average). Transformer learns auto-regressive token representations. Conditioned on them, TimeFlow transforms random noises into non-deterministic predictions.
 
 ## Evaluation
 

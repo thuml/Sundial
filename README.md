@@ -32,9 +32,9 @@ We propose **TimeFlow Loss** to predict next-patch’s distribution, allowing Tr
 
 We release a [HuggingFace model](https://huggingface.co/thuml/sundial-base-128m), which can make zero-shot predictions on CPU within seconds 🚀
 
-> Inference Time on Apple M1 Pro (16G)
+> Inference Time on Apple M1 Pro CPU (16G)
 
-| Lookback Length | Prediction Length | # Generated Samples | Inference Time | We Accelerate by 🚀|
+| Lookback Length | Prediction Length | # Generated Samples | Wall-Clock time | Accelerate By |
 | --------------- | ----------------- | ------------------- | -------------- | --------------         |
 | 672             | 16                | 1                   | 249ms          |       -                |
 | 2880            | 16                | 1                   | 510ms          | FlashAttention         |

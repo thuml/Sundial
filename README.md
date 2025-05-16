@@ -19,7 +19,7 @@ This is the official implementation of [Sundial: A Familiy of Highly Capable  Ti
 
 ## Introduction
 
-Sundial is a familiy of **generative** time series foundation models. The model can be applied for both **point** and **probabilistic** forecasting.
+Sundial is a familiy of **generative** time series foundation models, which is pre-trained on TimeBench (**10^12** time points). The model can be applied for both **point** and **probabilistic** forecasting.
 
 
 We propose **TimeFlow Loss** to predict next-patch’s distribution, allowing Transformers to be trained **without discrete tokenization** and make **non-deterministic predictions**.

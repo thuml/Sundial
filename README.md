@@ -110,7 +110,7 @@ If you find this repo helpful, please cite our paper.
 
 ## Acknowledgment
 
-We appreciate the following GitHub repos a lot for their valuable code and datasets:
+We appreciate the following resources a lot for their valuable code and datasets:
 
 - Time-Series-Library (https://github.com/thuml/Time-Series-Library)
 - Large-Time-Series-Model & UTSD (https://github.com/thuml/Large-Time-Series-Model)

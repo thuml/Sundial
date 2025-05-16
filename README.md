@@ -15,6 +15,8 @@ This is the official implementation of [Sundial: A Familiy of Highly Capable  Ti
 
 :triangular_flag_on_post: **News** (2025.05) Sundial has been accepted as **ICML 2025 Spotlight**. See you at Vancouver :)
 
+:triangular_flag_on_post: **News** (2025.02) Get **1st MSE/MAE** on the [Time-Series-Library](https://github.com/thuml/Time-Series-Library) datasets.
+
 ## Introduction
 
 Sundial is a familiy of **generative** time series foundation models. The model can be applied for both **point** and **probabilistic** forecasting.
@@ -88,9 +90,9 @@ We evaluate Sundial with advanced time series foundation models on well-recogniz
 - [GIFT-Eval(**1st MASE**)](./figures/gift_res.png)
 - [Time-Series-Library (**1st MSE/MAE**)](./figures/tslib_res.png)
 
-## Future Work
+## Exciting News ✨
 
-✨ Exciting news! Code for fine-tuning is on its way and will be available soon! Stay tuned for updates!
+ Code for fine-tuning is on its way and will be available soon! Stay tuned for updates!
 
 ## Citation
 

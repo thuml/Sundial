@@ -28,7 +28,19 @@ We propose **TimeFlow Loss** to predict next-patch’s distribution, allowing Tr
 
 ## Quickstart
 
-We release a [HuggingFace model](https://huggingface.co/thuml/sundial-base-128m), which makes zero-shot predictions on CPU within seconds:
+We release a [HuggingFace model](https://huggingface.co/thuml/sundial-base-128m), which makes zero-shot predictions on CPU within seconds 🚀
+
+> Inference Time on Apple M1 Pro (16G)
+
+| Lookback Length | Prediction Length | # Generated Samples | Inference Time |
+| --------------- | ----------------- | ------------------- | -------------- |
+| 672             | 16                | 1                   | 249ms         |
+| 2880            | 16                | 1                   | 497ms          |
+| 2880            | 288               | 1                   | 510ms          |
+| 2880            | 288               | 20                  | 949ms          |
+
+
+All you need is a network connection and the HuggingFace access.
 
 ```
 pip install transformers==4.40.1
@@ -39,7 +51,7 @@ import torch
 from transformers import AutoModelForCausalLM
 
 # load pretrain model
-# supports different lookback/prediction lengths
+# supports different lookback/forecast lengths
 model = AutoModelForCausalLM.from_pretrained('thuml/sundial-base-128m', trust_remote_code=True) 
 
 # prepare input
@@ -47,16 +59,18 @@ batch_size, lookback_length = 1, 2880
 seqs = torch.randn(batch_size, lookback_length)
 
 # generate multiple probable predictions
-prediction_length = 96 
+forecast_length = 96 
 num_samples = 20
 
-output = model.generate(seqs, max_new_tokens=prediction_length, num_samples=num_samples)
+output = model.generate(seqs, max_new_tokens=forecast_length, num_samples=num_samples)
 
 # use raw predictions for mean/quantiles/confidence-interval estimation
 print(output.shape) 
 ```
 
 More examples for predicting quantiles or confidence intervals is provided in this [notebook](https://github.com/thuml/Sundial/blob/main/examples/quickstart_zero_shot.ipynb).
+
+
 
 ## Architecture
 
@@ -76,7 +90,7 @@ We evaluate Sundial with advanced time series foundation models on well-recogniz
 
 ## Future Work
 
-✨ Exciting news! Code for fine-tuning is on its way and will be available soon! Stay tuned for updates! 🚀
+✨ Exciting news! Code for fine-tuning is on its way and will be available soon! Stay tuned for updates!
 
 ## Citation
 

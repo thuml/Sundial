@@ -13,7 +13,7 @@ This is the official implementation of [Sundial: A Familiy of Highly Capable  Ti
 
 :triangular_flag_on_post: **News** (2025.05) Get **1st MASE** on the [GIFT-Eval](https://huggingface.co/spaces/Salesforce/GIFT-Eval) Benchmark.
 
-:triangular_flag_on_post: **News** (2025.05) Sundial has been accepted as **ICML 2025 Spotlight**. See you at Vancouver :)
+:triangular_flag_on_post: **News** (2025.05) Sundial has been accepted as **ICML 2025 Spotlight** (Top 2.6%). See you at Vancouver :)
 
 :triangular_flag_on_post: **News** (2025.02) Get **1st MSE/MAE** on the [Time-Series-Library](https://github.com/thuml/Time-Series-Library) datasets.
 
@@ -122,3 +122,7 @@ If you have any questions or want to use the code, feel free to contact:
 
 * Yong Liu (liuyong21@mails.tsinghua.edu.cn)
 * Guo Qin (qinguo24@mails.tsinghua.edu.cn)
+
+## License
+
+This model is licensed under the Apache-2.0 License.

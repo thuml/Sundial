@@ -9,7 +9,7 @@ This is the official implementation of [Sundial: A Familiy of Highly Capable  Ti
 
 ## Updates
 
-:triangular_flag_on_post: **News** (2025.05) Released a **trillion-scale** pre-trained model on [HuggingFace](https://huggingface.co/thuml/sundial-base-128m). A quickstart is provided [here](./example/quickstart_zero_shot.ipynb).
+:triangular_flag_on_post: **News** (2025.05) Released a **trillion-scale** pre-trained model on [HuggingFace](https://huggingface.co/thuml/sundial-base-128m). A quickstart is provided [here](./examples/quickstart_zero_shot.ipynb).
 
 :triangular_flag_on_post: **News** (2025.05) Get **1st MASE** on the [GIFT-Eval](https://huggingface.co/spaces/Salesforce/GIFT-Eval) Benchmark.
 

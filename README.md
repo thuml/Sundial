@@ -28,7 +28,7 @@ We propose **TimeFlow Loss** to predict next-patch’s distribution, allowing Tr
 
 ## Quickstart
 
-We release the checkpoint and model wrapper to make zero-shot predictions on your customized data:
+We release a [HuggingFace model](https://huggingface.co/thuml/sundial-base-128m), which makes zero-shot predictions on CPU within seconds:
 
 ```
 pip install transformers==4.40.1

@@ -1,10 +1,11 @@
 # Sundial
 
+This is the official implementation of [Sundial: A Familiy of Highly Capable  Time Series Foundation Models](https://arxiv.org/abs/2502.00]816).
+
 <p align="center">
 <img src="./figures/cover.png" alt="" align=center />
 </p>
 
-This is the official implementation of [Sundial: A Familiy of Highly Capable  Time Series Foundation Models](https://arxiv.org/abs/2502.00]816).
 
 ## Updates
 

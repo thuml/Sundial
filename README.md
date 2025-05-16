@@ -110,11 +110,13 @@ If you find this repo helpful, please cite our paper.
 
 ## Acknowledgment
 
-We appreciate the following GitHub repos a lot for their valuable code and efforts:
+We appreciate the following GitHub repos a lot for their valuable code and datasets:
 
 - Time-Series-Library (https://github.com/thuml/Time-Series-Library)
-- Large-Time-Series-Model (https://github.com/thuml/Large-Time-Series-Model)
+- Large-Time-Series-Model & UTSD (https://github.com/thuml/Large-Time-Series-Model)
 - Timer-XL (https://github.com/thuml/Timer-XL)
+- LoTSA Data (https://huggingface.co/datasets/Salesforce/lotsa_data)
+- Chronos Datasets (https://huggingface.co/datasets/autogluon/chronos_datasets)
 
 ## Contact
 

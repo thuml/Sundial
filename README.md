@@ -34,13 +34,13 @@ We release a [HuggingFace model](https://huggingface.co/thuml/sundial-base-128m)
 
 > Inference Time on Apple M1 Pro (16G)
 
-| Lookback Length | Prediction Length | # Generated Samples | Inference Time |
-| --------------- | ----------------- | ------------------- | -------------- |
-| 672             | 16                | 1                   | 249ms         |
-| 2880            | 16                | 1                   | 497ms          |
-| 2880            | 288               | 1                   | 510ms          |
-| 2880            | 288               | 20                  | 949ms          |
-
+| Lookback Length | Prediction Length | # Generated Samples | Inference Time | We Accelerate by 🚀|
+| --------------- | ----------------- | ------------------- | -------------- | --------------         |
+| 672             | 16                | 1                   | 249ms          |       -                |
+| 2880            | 16                | 1                   | 510ms          | FlashAttention         |
+| 2880            | 720               | 1                   | 510ms          | Multi-Patch Prediction |
+| 2880            | 1440              | 1                   | 789ms          | KV Cache               |
+| 2880            | 720               | 20                  | 949ms          | Shared Condition       |
 
 All you need is a network connection and the HuggingFace access!
 

@@ -87,7 +87,7 @@ More examples for predicting quantiles or confidence intervals is provided in th
 We evaluate Sundial with advanced time series foundation models on well-recognized benchmarks:
 
 - [FEV Leaderboard](./figures/fev_res.png)
-- [GIFT-Eval(**1st MASE**)](./figures/gift_res.png)
+- [GIFT-Eval (**1st MASE and 2rd CRPS**)](./figures/gift_res.png)
 - [Time-Series-Library (**1st MSE/MAE**)](./figures/tslib_res.png)
 
 ## Exciting News ✨

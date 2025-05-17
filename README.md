@@ -15,7 +15,7 @@ This is the official implementation of [Sundial: A Familiy of Highly Capable  Ti
 
 :triangular_flag_on_post: **News** (2025.05) Sundial has been accepted as **ICML 2025 Spotlight** (Top 2.6%). See you at Vancouver :)
 
-:triangular_flag_on_post: **News** (2025.02) Get **1st MSE/MAE** on the [Time-Series-Library](https://github.com/thuml/Time-Series-Library) datasets.
+:triangular_flag_on_post: **News** (2025.02) Get **1st MSE/MAE** zero-shot performance on [Time-Series-Library](https://github.com/thuml/Time-Series-Library) datasets.
 
 ## Introduction
 

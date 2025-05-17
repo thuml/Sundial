@@ -34,7 +34,7 @@ We release a [HuggingFace model](https://huggingface.co/thuml/sundial-base-128m)
 
 > Inference Time on Apple M1 Pro CPU (16G)
 
-| Lookback Length | Prediction Length | # Generated Samples | Wall-Clock Time | Accelerate By         |
+| Lookback | Forcast | # Generated | Wall-Clock Time | Accelerate By         |
 | --------------- | ----------------- | ------------------- | -------------- | --------------         |
 | 672             | 16                | 1                   | 249ms          |       -                |
 | 2880            | 16                | 1                   | 510ms          | FlashAttention         |

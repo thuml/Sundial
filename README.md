@@ -11,7 +11,7 @@ This is the official repository of [Sundial: A Familiy of Highly Capable  Time S
 
 :triangular_flag_on_post: **News** (2025.05) Released a **trillion-scale** pre-trained model on [HuggingFace](https://huggingface.co/thuml/sundial-base-128m). A quickstart is provided [here](./examples/quickstart_zero_shot.ipynb).
 
-:triangular_flag_on_post: **News** (2025.05) Get **1st MASE** on the [GIFT-Eval](https://huggingface.co/spaces/Salesforce/GIFT-Eval) Benchmark.
+:triangular_flag_on_post: **News** (2025.05) Get **1st MASE and 2rd CRPS** on the [GIFT-Eval](https://huggingface.co/spaces/Salesforce/GIFT-Eval) Benchmark.
 
 :triangular_flag_on_post: **News** (2025.05) Sundial has been accepted as **ICML 2025 Spotlight** (Top 2.6%). See you at Vancouver :)
 

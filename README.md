@@ -60,7 +60,7 @@ model = AutoModelForCausalLM.from_pretrained('thuml/sundial-base-128m', trust_re
 batch_size, lookback_length = 1, 2880 
 seqs = torch.randn(batch_size, lookback_length)
 
-# generate multiple probable predictions
+# Note that Sundial can generate multiple probable predictions
 forecast_length = 96 
 num_samples = 20
 

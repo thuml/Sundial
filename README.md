@@ -25,7 +25,7 @@ Sundial is a familiy of **generative** time series foundation models, which is p
 We propose **TimeFlow Loss** to predict next-patch’s distribution, allowing Transformers to be trained **without discrete tokenization** and make **non-deterministic predictions**.
 
 <p align="center">
-<img src="./figures/motivation.png" alt="" align=center />
+<img src="./figures/compare.png" alt="" align=center />
 </p>
 
 ## Quickstart
@@ -86,9 +86,9 @@ More examples for predicting quantiles or confidence intervals is provided in th
 
 We evaluate Sundial with advanced time series foundation models on well-recognized benchmarks:
 
-- [FEV Leaderboard](./figures/fev_res.png)
-- [GIFT-Eval (**1st MASE and 2rd CRPS**)](./figures/gift_res.png)
-- [Time-Series-Library (**1st MSE/MAE**)](./figures/tslib_res.png)
+- [GIFT-Eval (1st MASE and 2rd CRPS)](https://huggingface.co/spaces/Salesforce/GIFT-Eval).
+- [Time-Series-Library (1st MSE/MAE)](https://cdn-uploads.huggingface.co/production/uploads/64fbe24a2d20ced4e91de38a/5VqnFwWTWoYz877Zkluiw.png).
+- [FEV Leaderboard](https://cdn-uploads.huggingface.co/production/uploads/64fbe24a2d20ced4e91de38a/mrKL9QmX-aX8rCiwxKgmA.png).
 
 ## Exciting News ✨
 

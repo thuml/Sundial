@@ -63,7 +63,7 @@ output = model.generate(seqs, max_new_tokens=forecast_length, num_samples=num_sa
 print(output.shape) 
 ```
 
-More examples for predicting quantiles or confidence intervals is provided in this [notebook](https://github.com/thuml/Sundial/blob/main/examples/quickstart_zero_shot.ipynb).
+More examples for predicting quantiles or confidence intervals are provided in this [notebook](https://github.com/thuml/Sundial/blob/main/examples/quickstart_zero_shot.ipynb).
 
 
 

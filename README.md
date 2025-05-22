@@ -77,9 +77,17 @@ More examples for predicting quantiles or confidence intervals is provided in th
 
 > Intuitively, Sundial can be viewed as an **ARMA** model (Auto-Regression and Moving-Average). Transformer learns auto-regressive token representations. Conditioned on them, TimeFlow transforms random noises into non-deterministic predictions.
 
+## Model Configurations
+
+We have currently built three different sizes of Sundial, and the configurations are provided here:
+
+<p align="center">
+<img src="./figures/cover.png" alt="" align=center />
+</p>
+
 ## Evaluation
 
-We evaluate Sundial with advanced time series foundation models on well-recognized benchmarks:
+We evaluate Sundial (Base) with advanced time series foundation models on well-recognized benchmarks:
 
 - [GIFT-Eval (1st MASE)](https://huggingface.co/spaces/Salesforce/GIFT-Eval).
 - [Time-Series-Library (1st MSE/MAE)](https://cdn-uploads.huggingface.co/production/uploads/64fbe24a2d20ced4e91de38a/5VqnFwWTWoYz877Zkluiw.png).

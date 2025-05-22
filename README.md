@@ -2,6 +2,10 @@
 
 This is the official repository of [Sundial: A Family of Highly Capable  Time Series Foundation Models](https://arxiv.org/abs/2502.00]816).
 
+<p align="center">
+<img src="./figures/cover.png" alt="" align=center />
+</p>
+
 ## Updates
 
 :triangular_flag_on_post: **News** (2025.05) Released a **trillion-scale** pre-trained model on [HuggingFace](https://huggingface.co/thuml/sundial-base-128m). A quickstart is provided [here](./examples/quickstart_zero_shot.ipynb).
@@ -80,7 +84,7 @@ More examples for predicting quantiles or confidence intervals are provided in t
 We have currently built three different sizes of Sundial. Model configurations are provided here:
 
 <p align="center">
-<img src="./figures/cover.png" alt="" align=center />
+<img src="./figures/config.png" alt="" align=center />
 </p>
 
 ## Evaluation

@@ -79,7 +79,7 @@ More examples for predicting quantiles or confidence intervals is provided in th
 
 ## Model Configurations
 
-We have currently built three different sizes of Sundial, and the configurations are provided here:
+We have currently built three different sizes of Sundial. Model configurations are provided here:
 
 <p align="center">
 <img src="./figures/cover.png" alt="" align=center />

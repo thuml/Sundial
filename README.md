@@ -11,7 +11,7 @@ This is the official repository of [Sundial: A Familiy of Highly Capable  Time S
 
 :triangular_flag_on_post: **News** (2025.05) Released a **trillion-scale** pre-trained model on [HuggingFace](https://huggingface.co/thuml/sundial-base-128m). A quickstart is provided [here](./examples/quickstart_zero_shot.ipynb).
 
-:triangular_flag_on_post: **News** (2025.05) Get **1st MASE and 2rd CRPS** on the [GIFT-Eval](https://huggingface.co/spaces/Salesforce/GIFT-Eval) Benchmark.
+:triangular_flag_on_post: **News** (2025.05) Get **1st MASE** on the [GIFT-Eval](https://huggingface.co/spaces/Salesforce/GIFT-Eval) Benchmark.
 
 :triangular_flag_on_post: **News** (2025.05) Sundial has been accepted as **ICML 2025 Spotlight** (Top 2.6%). See you at Vancouver :)
 
@@ -19,7 +19,7 @@ This is the official repository of [Sundial: A Familiy of Highly Capable  Time S
 
 ## Introduction
 
-Sundial is a familiy of **generative** time series foundation models, which is pre-trained on TimeBench (**10^12** time points). The model can be applied for both **point** and **probabilistic** forecasting.
+Sundial is a family of **generative** time series foundation models, which is pre-trained on TimeBench (**10^12** time points). The model can be applied for both **point** and **probabilistic** forecasting.
 
 
 We propose **TimeFlow Loss** to predict next-patch’s distribution, allowing Transformers to be trained **without discrete tokenization** and make **non-deterministic predictions**.
@@ -32,7 +32,7 @@ We propose **TimeFlow Loss** to predict next-patch’s distribution, allowing Tr
 
 We release a [HuggingFace model](https://huggingface.co/thuml/sundial-base-128m), which can make zero-shot predictions on CPU within seconds! 🚀
 
-> Inference Time on Apple M1 Pro CPU (16G)
+> Inference Time on Apple M1 Pro CPU (16 GB)
 
 | Lookback | Forcast | # Generated | Wall-Clock Time | Accelerate By         |
 | --------------- | ----------------- | ------------------- | -------------- | --------------         |
@@ -86,7 +86,7 @@ More examples for predicting quantiles or confidence intervals is provided in th
 
 We evaluate Sundial with advanced time series foundation models on well-recognized benchmarks:
 
-- [GIFT-Eval (1st MASE and 2rd CRPS)](https://huggingface.co/spaces/Salesforce/GIFT-Eval).
+- [GIFT-Eval (1st MASE)](https://huggingface.co/spaces/Salesforce/GIFT-Eval).
 - [Time-Series-Library (1st MSE/MAE)](https://cdn-uploads.huggingface.co/production/uploads/64fbe24a2d20ced4e91de38a/5VqnFwWTWoYz877Zkluiw.png).
 - [FEV Leaderboard](https://cdn-uploads.huggingface.co/production/uploads/64fbe24a2d20ced4e91de38a/mrKL9QmX-aX8rCiwxKgmA.png).
 

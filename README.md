@@ -8,6 +8,8 @@ This is the official repository of [Sundial: A Family of Highly Capable  Time Se
 
 ## Updates
 
+:triangular_flag_on_post: **News** (2025.05) Get **1st MASE** on the [GIFT-Eval](https://huggingface.co/spaces/Salesforce/GIFT-Eval) Benchmark.
+
 :triangular_flag_on_post: **News** (2025.05) Released a **trillion-scale** pre-trained model on [HuggingFace](https://huggingface.co/thuml/sundial-base-128m). A quickstart is provided [here](./examples/quickstart_zero_shot.ipynb).
 
 :triangular_flag_on_post: **News** (2025.05) Sundial has been accepted as **ICML 2025 Spotlight** (Top 2.6%). See you at Vancouver :)
@@ -91,7 +93,7 @@ We have currently built three different sizes of Sundial. Model configurations a
 
 We evaluate Sundial (Base) with advanced time series foundation models on well-recognized benchmarks:
 
-- [GIFT-Eval (1st MASE)](https://cdn-uploads.huggingface.co/production/uploads/64fbe24a2d20ced4e91de38a/3BxatwayhK5GAoqMf1oHv.png).
+- [GIFT-Eval (1st MASE)](https://cdn-uploads.huggingface.co/production/uploads/64fbe24a2d20ced4e91de38a/3BxatwayhK5GAoqMf1oHv.png) [[Leaderboard]](https://huggingface.co/spaces/Salesforce/GIFT-Eval).
 - [Time-Series-Library (1st MSE/MAE)](https://cdn-uploads.huggingface.co/production/uploads/64fbe24a2d20ced4e91de38a/5VqnFwWTWoYz877Zkluiw.png).
 - [FEV Leaderboard](https://cdn-uploads.huggingface.co/production/uploads/64fbe24a2d20ced4e91de38a/mrKL9QmX-aX8rCiwxKgmA.png).
 

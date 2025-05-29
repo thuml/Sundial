@@ -20,6 +20,7 @@ This is the official repository of [Sundial: A Family of Highly Capable  Time Se
 
 Sundial is a family of **generative** time series foundation models, which is pre-trained on TimeBench (**10^12** time points). The model can be applied for both **point** and **probabilistic** forecasting.
 
+Not only the mean or quantiles, you can estimate anything about the predictive distribution with raw generated samples.
 
 We propose **TimeFlow Loss** to predict next-patch’s distribution, allowing Transformers to be trained **without discrete tokenization** and make **non-deterministic predictions**.
 
@@ -69,7 +70,7 @@ output = model.generate(seqs, max_new_tokens=forecast_length, num_samples=num_sa
 print(output.shape) 
 ```
 
-More examples for predicting quantiles or confidence intervals are provided in this [notebook](https://github.com/thuml/Sundial/blob/main/examples/quickstart_zero_shot.ipynb).
+More examples of predicting quantiles or confidence intervals are provided in this [notebook](https://github.com/thuml/Sundial/blob/main/examples/quickstart_zero_shot.ipynb). Please raise your valuable suggestions [here](https://huggingface.co/thuml/sundial-base-128m/discussions/new), we 'd like to solve it ASAP 🤗.
 
 
 

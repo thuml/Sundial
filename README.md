@@ -8,11 +8,11 @@ This is the official repository of [Sundial: A Family of Highly Capable  Time Se
 
 ## Updates
 
+:triangular_flag_on_post: **News** (2025.06) Sundial has been accepted as **ICML 2025 Oral** (Top 1%). See you at Vancouver :)
+
 :triangular_flag_on_post: **News** (2025.05) Get **1st MASE** on the [GIFT-Eval](https://huggingface.co/spaces/Salesforce/GIFT-Eval) Benchmark.
 
 :triangular_flag_on_post: **News** (2025.05) Released a **trillion-scale** pre-trained model on [HuggingFace](https://huggingface.co/thuml/sundial-base-128m). A quickstart is provided [here](./examples/quickstart_zero_shot.ipynb).
-
-:triangular_flag_on_post: **News** (2025.05) Sundial has been accepted as **ICML 2025 Oral** (Top 1%). See you at Vancouver :)
 
 :triangular_flag_on_post: **News** (2025.02) Get **1st MSE/MAE** zero-shot performance on [Time-Series-Library](https://github.com/thuml/Time-Series-Library) datasets.
 

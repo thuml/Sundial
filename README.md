@@ -12,7 +12,7 @@ This is the official repository of [Sundial: A Family of Highly Capable  Time Se
 
 :triangular_flag_on_post: **News** (2025.05) Get **1st MASE** on the [GIFT-Eval](https://huggingface.co/spaces/Salesforce/GIFT-Eval) Benchmark.
 
-:triangular_flag_on_post: **News** (2025.05) Released a **trillion-scale** pre-trained model on [HuggingFace](https://huggingface.co/thuml/sundial-base-128m). A quickstart is provided [here](./examples/quickstart_zero_shot.ipynb).
+:triangular_flag_on_post: **News** (2025.05) Released a **trillion-scale** pre-trained model on [HuggingFace](https://huggingface.co/thuml/sundial-base-128m). A quickstart is provided [here](./examples/quickstart_zero_shot_generation.ipynb).
 
 :triangular_flag_on_post: **News** (2025.02) Get **1st MSE/MAE** zero-shot performance on [Time-Series-Library](https://github.com/thuml/Time-Series-Library) datasets.
 
@@ -70,7 +70,7 @@ output = model.generate(seqs, max_new_tokens=forecast_length, num_samples=num_sa
 print(output.shape) 
 ```
 
-More examples of predicting quantiles or confidence intervals are provided in this [notebook](https://github.com/thuml/Sundial/blob/main/examples/quickstart_zero_shot.ipynb). Please raise your valuable suggestions [here](https://huggingface.co/thuml/sundial-base-128m/discussions/new), we 'd like to solve it ASAP 🤗.
+More examples of predicting quantiles or confidence intervals are provided in this [notebook](https://github.com/thuml/Sundial/blob/main/examples/quickstart_zero_shot_generation.ipynb). Please raise your valuable suggestions [here](https://huggingface.co/thuml/sundial-base-128m/discussions/new), we 'd like to solve it ASAP 🤗.
 
 
 

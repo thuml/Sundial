@@ -1,6 +1,6 @@
 # Sundial
 
-This is the official repository of [Sundial: A Family of Highly Capable  Time Series Foundation Models](https://arxiv.org/abs/2502.00]816).
+This is the official repository of [Sundial: A Family of Highly Capable  Time Series Foundation Models](https://arxiv.org/abs/2502.00]816) [[Intro]](https://mp.weixin.qq.com/s/y3sc2e2lmW1sqfnoK-ZdDA).
 
 <p align="center">
 <img src="./figures/cover.png" alt="" align=center />

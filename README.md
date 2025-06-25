@@ -42,7 +42,7 @@ We release a [HuggingFace model](https://huggingface.co/thuml/sundial-base-128m)
 | 2880            | 1440              | 1                   | 789ms          | KV Cache               |
 | 2880            | 720               | 20                  | 949ms          | Shared Condition       |
 
-All you need is a network connection and the HuggingFace access!
+All you need is a network and a HuggingFace account!
 
 ```
 pip install transformers==4.40.1
